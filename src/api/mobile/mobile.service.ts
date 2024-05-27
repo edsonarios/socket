@@ -10,7 +10,7 @@ export class MobileService {
   create(createMobileDto: CreateMobileDto) {
     console.log('createMobileDto:', createMobileDto)
     this.chatGateway.emitMessage('products', createMobileDto.message)
-    return 'This action adds a new mobile'
+    return { response: 'This action adds a new mobile' }
   }
 
   addListener = (socket: Socket) => {
@@ -18,19 +18,19 @@ export class MobileService {
   }
 
   findAll() {
-    return `This action returns all mobile`
+    return { response: `This action returns all mobile` }
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} mobile`
+    return { response: `This action returns a #${id} mobile` }
   }
 
   update(id: number, updateMobileDto: UpdateMobileDto) {
     console.log(updateMobileDto)
-    return `This action updates a #${id} mobile`
+    return { response: `This action updates a #${id} mobile` }
   }
 
   remove(id: number) {
-    return `This action removes a #${id} mobile`
+    return { response: `This action removes a #${id} mobile` }
   }
 }
