@@ -6,7 +6,7 @@ async function bootstrap() {
   await app.listen(3000)
   console.log('Enable cors3')
   app.enableCors({
-    origin: ['*'],
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders:
       'Content-Type, Authorization, Access-Control-Allow-Origin, Access-Control-Allow-Headers, X-Requested-With, Access-Control-Allow-Methods',
