@@ -4,12 +4,11 @@ import { AppModule } from './app.module'
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
   await app.listen(3000)
-  console.log('Enable cors')
+  console.log('Enable cors2')
   app.enableCors({
     origin: '*',
     methods: 'ALL',
-    allowedHeaders:
-      'Content-Type, Accept, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token',
+    allowedHeaders: 'Content-Type, Authorization',
   })
 }
 bootstrap()
